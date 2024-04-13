@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Mantenimiento Preventivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 15px); /* Ajusta el tamaño de la tarjeta para que haya cuatro tarjetas por fila */
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-card-content {
+            padding: 20px;
+        }
+
+        .service-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Servicios de Mantenimiento Preventivo para PC o Laptop</h1>
+    <div id="services-container"></div>
+
+    <script>
+        // Datos de los servicios
+        const servicios = [
+            {
+                titulo: 'Limpieza Completa',
+                descripcion: 'Eliminación de polvo y suciedad de componentes internos y externos para mejorar el rendimiento y la vida útil del equipo.',
+                imagen: 'https://www.senati.edu.pe/sites/default/files/2017/carrera/11/carrera-dual-soporte-y-mantenimiento-de-equipos-de-computacion-senati1800-x-1190.jpg'
+            },
+            {
+                titulo: 'Cambio de Pasta Térmica',
+                descripcion: 'Reemplazo de la pasta térmica en el procesador para mejorar la disipación del calor y evitar problemas de sobrecalentamiento.',
+                imagen: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/01/pasta-termica-procesador-2588109.jpg?tf=3840x'
+            },
+            {
+                titulo: 'Lubricación de Ventiladores',
+                descripcion: 'Aplicación de lubricante a los rodamientos de los ventiladores para garantizar un funcionamiento suave y silencioso.',
+                imagen: 'https://cdn.daa.net/images/aire-acondicionado/Fotolia_267940777_S.jpg'
+            },
+            {
+                titulo: 'Cambio de Disco Duro a SSD',
+                descripcion: 'Actualización del disco duro tradicional a un SSD para mejorar significativamente el rendimiento y la velocidad del sistema.',
+                imagen: 'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2017/12/279587-como-cambiar-disco-duro-tu-portatil-ssd.jpg?tf=3840x'
+            },
+            {
+                titulo: 'Aumento de Memoria RAM',
+                descripcion: 'Instalación de módulos de memoria RAM adicionales para aumentar la capacidad de procesamiento y mejorar el rendimiento del sistema.',
+                imagen: 'https://blog.plazavea.com.pe/wp-content/uploads/2022/07/Memoria-RAM-laptop.jpg'
+            },
+            {
+                titulo: 'Elaboración de Currículums',
+                descripcion: 'Creación de currículums profesionales y personalizados para destacar tus habilidades y experiencia laboral.',
+                imagen: 'https://www.modelos-de-curriculum.com/wp-content/uploads/2022/06/partes-curriculum-vitae-2.jpg'
+            },
+            {
+                titulo: 'Instalación de Paquetería de Office',
+                descripcion: 'Configuración e instalación del paquete de software Office para satisfacer tus necesidades de productividad.',
+                imagen: 'https://www.reparaciondenotebooks.com/wp-content/uploads/2018/11/office.jpg'
+            },
+            {
+                titulo: 'Instalación de Windows',
+                descripcion: 'Instalación y configuración del sistema operativo Windows para asegurar un inicio rápido y un funcionamiento óptimo del sistema.',
+                imagen: 'https://hardzone.es/app/uploads-hardzone.es/2022/12/ordenador-portatil-sin-windows.jpg?x\u003d480\u0026y\u003d375\u0026quality\u003d40'
+            }
+        ];
+
+        // Función para cargar los servicios en la página
+        function cargarServicios() {
+            const servicesContainer = document.getElementById('services-container');
+
+            // Iterar sobre los servicios y agregarlos al contenedor
+            servicios.forEach(servicio => {
+                const serviceCard = document.createElement('div');
+                serviceCard.classList.add('service-card');
+
+                const serviceCardContent = `
+                    <img src="${servicio.imagen}" alt="${servicio.titulo}">
+                    <div class="service-card-content">
+                        <h2 class="service-title">${servicio.titulo}</h2>
+                        <p class="service-description">${servicio.descripcion}</p>
+                    </div>
+                `;
+
+                serviceCard.innerHTML = serviceCardContent;
+                servicesContainer.appendChild(serviceCard);
+            });
+        }
+
+        // Llamar a la función para cargar los servicios al cargar la página
+        window.onload = cargarServicios;
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/*********************************************/
+/* Portada, fondo, biografia y texto animado */
+/*********************************************/
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/EumlWEB-lmgur.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: space-end;
+}
+.inicio .contenido-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-banner .contenedor-img {
+    flex: 1;
+    text-align: center;
+}
+
+.contenido-banner .txtanimado {
+    margin-top: 20%;
+    flex: 1;
+    text-align: left;
+    padding: 0 20px; /* Add some padding for spacing */
+}
+
+.contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 40%;
+    margin-top: 0%;
+    border-radius: 50px;
+}
+
+
+.txtanimado h1 {
+    color: #ffffff; /* White color */
+    font-size: 50px; /* Font size */
+    font-weight: 100; /* Light font weight */
+}
+
+.txtanimado h1 span {
+    color: #3538f8;
+}
+.txtanimado p {
+    position: absolute;
+    padding-top: 65px; 
+    color: #f8f9fa;
+}
+
+@media (max-width: 1260px) {
+    .txtanimado {
+        flex-direction: column;
+    }
+
+    .txtanimado p {
+        position: absolute;
+        padding-top: 100px; 
+        color: #f8f9fa;
+    }
+}
+
+@media (max-width: 720px) {
+    .txtanimado {
+        top: 35%;
+        transform: translateY(-35%);
+    }
+}
+
+@media (max-width: 700px) {
+    .txtanimado {
+        width: 80%;
+    }
+    .txtanimado p {
+        padding-top: 110px;      
+    }
+}
+
+@media (max-width: 300px) {
+    .contenido-banner {
+        background: #ffffff;    
+    }
+    .contenido-banner img {
+        display: none;
+    }
+}
+
+    .txtanimado {
+        width: 90%;
+        top: 15%;
+        transform: translateY(-15%);
+        left: 5%;
+        align-items: center;
+    }
+    
+    .txtanimado h1 {      
+        font-size: 30px;
+    }
+    .txtanimado p {
+        font-size: 18px;
+        padding-top: 95px;
+        text-align: justify;
+    }
+
+
+@media (max-width: 340px) {
+    .txtanimado h1 {      
+        font-size: 20px;
+    }
+    .txtanimado p {
+        font-size: 15px;
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 236px) {
+    .txtanimado h1 {      
+        font-size: 15px;
+    }
+    .txtanimado p {
+        font-size: 10px;
+        padding-top: 50px;
+    }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios</title>
+    <style>
+        .fondo {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 400px;
+            background: #000000;
+        }
+
+        .tablasEstudios {
+            position: absolute;
+            top: 20%;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container table {
+            margin-right: 10px;
+        }
+
+
+        .table-transparent {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            width: 100%;
+        }
+
+        .table-transparent thead th,
+        .table-transparent tbody td {
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        .table-transparent thead {
+            background-color: #5732fb;
+            /* Fondo semi-transparente para la cabecera */
+        }
+
+        .table-transparent tbody {
+            background-color: black;
+            /* Fondo semi-transparente para las filas */
+        }
+
+        .footer {
+            margin-top: 0;
+        }
+
+        @media (max-width: 991.98px) {
+
+            .fondo {
+                height: 950px;
+            }
+
+            .container {
+                display: block;
+            }
+
+            .container table {
+                margin-bottom: 30px !important;
+            }
+
+            .tablasEstudios {
+                top: 2%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+     <!-- Fin del menu -->
+     <div class="fondo">
+        <div class="tablasEstudios">
+  
+            <div class="container table-responsive">
+  
+                <table class="table-bordered table-transparent">
+                    <thead>
+                        <tr>
+                            <th scope="col">TITULOS</th>
+                            <th scope="col">Institución</th>
+                            <th scope="col">Período</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <ul>
+                                    <li>Técnico En Ingeniería De Desarrollo De Software</li>
+                                </ul>
+                            </th>
+                            <td>
+                                <img src="https://th.bing.com/th/id/OIP.28K363uF-FiNU0GcAIsy7QAAAA?rs=1&pid=ImgDetMain"
+                                    alt="Descripción de la imagen" width="240" height="50"><br>
+                                Escuela Especializada En Ingeniería ITCA-FEPADE
+                            </td>
+                            <td>2022 2023</td>
+                        </tr>
+                     
+                        <tr>
+                            <th scope="row">
+                                <ul>
+                                    <li>IT ESSENTIALS: PC Hardware And Software.</li>
+                                    <li>Introducción a IoT.</li>
+                                    <li> Introduction to Cybersecurity.</li>
+                                    <li>Cyber Threat Managent.</li>
+                                </ul>
+                            </th>
+                            <td>
+                                <img src="assets/introduction-to-cybersecurity.png"
+                                    alt="Descripción de la imagen" width="130" height="100"><br>
+                                CISCO Networking Academy (online)
+                            </td>
+                            <td>2022 2023</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <ul>
+                                    <li>Azure Fundamentals</li>
+                                </ul>
+                            </th>
+                            <td><br>
+                                <img src="https://th.bing.com/th/id/R.38e155260a8b1e6d8346ca1b08758159?rik=6wGkJvOu%2fzdE4w&riu=http%3a%2f%2f4.bp.blogspot.com%2f-PK8iwFVqTFM%2fUIbK0EezJKI%2fAAAAAAAAKsE%2fn7jm9_0b1d8%2fs1600%2fmicrosoft.jpg&ehk=pzc6z5XqGdatPqGsBsr%2fAkM8fMr9lOXSXY%2fGwVf%2fXg4%3d&risl=&pid=ImgRaw&r=0"
+                                    alt="Descripción de la imagen" width="240" height="50"><br>
+                                Microsoft
+                            </td>
+                            <td>2023 2023</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <ul>
+                                    <li>Gestion de Amenazas de Seguridad</li>
+                                </ul>
+                            </th>
+                            <td><br>
+                                <img src="assets/cyber-threat-management.png"
+                                    alt="Descripción de la imagen" width="240" height="50"><br>
+                                    CISCO Networking Academy (online)
+                            </td>
+                            <td>2023 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+  
+            </div>
+  
+        </div>
+    </div>
+  
+    <!-- Pie de pagina -->
+    <div class="footer">
+  
+      <div class="redesSociales">
+          <a href="https://www.facebook.com/rnal.rguez" target="_blank" title="Facebook">
+              <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/thisis_neto" target="_blank" title="Instagram">
+              <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=50376380206" target="_blank" title="Whatsapp">
+              <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://github.com/RonaldOrtz" target="_blank" title="GitHub">
+              <i class="bi bi-github"></i>
+          </a>
+          <a href="mailto:Ron.rguez90@gmail.com" target="_blank" title="Gmail">
+              <i class="bi bi-envelope-at-fill"></i>
+          </a>
+          <br>
+          <br>
+          © 2024 - Todos los derechos reservados | Rnd Rodriguez
+      </div>
+  
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

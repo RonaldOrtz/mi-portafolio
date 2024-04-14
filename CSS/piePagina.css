@@ -1,22 +1,37 @@
 .footer {
+    text-align: center; /* Alinea el contenido del footer al centro */
     margin-top: 100px;
     background: black;
+    width: 100%; /* Cubre todo el ancho disponible */
+    padding: 20px; /* Espacio interno del footer */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .socials-icons {
-    position: relative;
-    top: 40%;
-    padding:  0 8rem;
+    display: flex; /* Usa flexbox para el diseño */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    flex-wrap: wrap; /* Envuelve los elementos en varias líneas si es necesario */
 }
 
-.socials-icons i {
-    display: block;
-    margin: 25px 0;
-    color: #FF0000;
-    font-size: 1.5rem;
-    transition: all 0.6s;
+.profile-container {
+    margin-left: auto; /* Mueve el contenedor de la foto de perfil a la derecha */
 }
 
+.profile-picture {
+    width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 50px; /* Ajusta la altura de la imagen según sea necesario */
+    border-radius: 50%; /* Aplica bordes redondeados para que sea una imagen circular */
+}
+
+.social-links a {
+    margin-right: 10px; /* Espacio entre los íconos de redes sociales */
+}
+
+.copyright {
+    text-align: center; /* Alinea el texto al centro */
+    margin-top: 20px; /* Espacio entre el contenido y el copyright */
+}
 .socials-icons i:hover a  {
     transform: rotate3d(0, 0, 1, 90deg);
 }

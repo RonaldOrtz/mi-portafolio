@@ -9,31 +9,40 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: wheat;
         }
 
         h1 {
             text-align: center;
             margin-top: 20px;
-            color: #333;
+            color: black;
         }
 
-        #services-container {
+        #services-carousel {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 800px;
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 100%;
             margin: 20px auto;
+            max-width: 800px;
+            position: relative;
         }
 
         .service-card {
-            background-color: #fff;
+            flex: 0 0 auto;
+            width: calc(25% - 15px);
+            margin-right: 20px;
+            scroll-snap-align: start;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: calc(25% - 15px); /* Ajusta el tamaño de la tarjeta para que haya cuatro tarjetas por fila */
-            margin-bottom: 20px;
             overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
         }
 
         .service-card img {
@@ -55,11 +64,39 @@
             color: #666;
             margin-bottom: 20px;
         }
+
+        .prev-btn,
+        .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .prev-btn:hover,
+        .next-btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .prev-btn {
+            left: 0;
+        }
+
+        .next-btn {
+            right: 0;
+        }
     </style>
 </head>
 <body>
     <h1>Servicios de Mantenimiento Preventivo para PC o Laptop</h1>
-    <div id="services-container"></div>
+    <div id="services-carousel"></div>
+    <div class="prev-btn" onclick="prevSlide()">&#10094; Anterior</div>
+    <div class="next-btn" onclick="nextSlide()">Siguiente &#10095;</div>
 
     <script>
         // Datos de los servicios
@@ -106,11 +143,10 @@
             }
         ];
 
-        // Función para cargar los servicios en la página
+        // Función para cargar los servicios en el carrusel
         function cargarServicios() {
-            const servicesContainer = document.getElementById('services-container');
+            const servicesCarousel = document.getElementById('services-carousel');
 
-            // Iterar sobre los servicios y agregarlos al contenedor
             servicios.forEach(servicio => {
                 const serviceCard = document.createElement('div');
                 serviceCard.classList.add('service-card');
@@ -124,11 +160,41 @@
                 `;
 
                 serviceCard.innerHTML = serviceCardContent;
-                servicesContainer.appendChild(serviceCard);
+                servicesCarousel.appendChild(serviceCard);
             });
         }
 
-        // Llamar a la función para cargar los servicios al cargar la página
+        // Variables para controlar el carrusel
+        let currentSlide = 0;
+
+        // Función para mostrar la siguiente diapositiva
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= servicios.length) {
+                currentSlide = 0;
+            }
+            scrollToSlide(currentSlide);
+        }
+
+        // Función para mostrar la diapositiva anterior
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = servicios.length - 1;
+            }
+            scrollToSlide(currentSlide);
+        }
+
+        // Función para desplazar el carrusel a la diapositiva especificada
+        function scrollToSlide(slideIndex) {
+            const servicesCarousel = document.getElementById('services-carousel');
+            servicesCarousel.scrollTo({
+                left: servicesCarousel.offsetWidth * slideIndex,
+                behavior: 'smooth'
+            });
+        }
+
+        // Cargar los servicios al cargar la página
         window.onload = cargarServicios;
     </script>
 </body>

@@ -3,42 +3,123 @@
     margin-top: 100px;
     background: black;
     width: 100%; /* Cubre todo el ancho disponible */
-    padding: 20px; /* Espacio interno del footer */
+    padding: 5px; /* Espacio interno del footer */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
-.socials-icons {
-    display: flex; /* Usa flexbox para el diseño */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    flex-wrap: wrap; /* Envuelve los elementos en varias líneas si es necesario */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon{
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+    
+
+}
+
+.wrapper .tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.3s;
+    
+}
+
+.wrapper .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s;
+}
+
+.wrapper .icon:hover .tooltip{
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px
+    rgba(0, 0, 0, 0.1);
+}
+
+.facebook{
+    --color: #1877f2;
+}
+.instagram{
+    --color:#1da1f2;
+}
+.github{
+    --color: #333333;
+}
+
+.whatsapp{
+    --color:green;
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before{
+    background: var(--color);
+    color: white;
 }
 
 .profile-container {
-    margin-left: auto; /* Mueve el contenedor de la foto de perfil a la derecha */
+    display: grid;
 }
 
 .profile-picture {
-    width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
-    height: 50px; /* Ajusta la altura de la imagen según sea necesario */
-    border-radius: 50%; /* Aplica bordes redondeados para que sea una imagen circular */
-}
-
-.social-links a {
-    margin-right: 10px; /* Espacio entre los íconos de redes sociales */
+    background-color: deeppink;
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 100%; /* Ajusta la altura de la imagen según sea necesario */
+    border-radius: 200%; /* Aplica bordes redondeados para que sea una imagen circular */
+   
 }
 
 .copyright {
+    height: 50px;
     text-align: center; /* Alinea el texto al centro */
     margin-top: 20px; /* Espacio entre el contenido y el copyright */
 }
-.socials-icons i:hover a  {
-    transform: rotate3d(0, 0, 1, 90deg);
-}
+
 
 @media (max-width: 300px) {
     .footer {
-        background-image: url('img/EumlWEB-lmgur.jpg');
+        background-image: url('imagen/EumlWEB-lmgur.jpg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         height: 300px;
@@ -46,14 +127,6 @@
         align-items: center; /* Alineamos verticalmente los elementos en el centro */
     }
 
-    .socials-icons {
-    padding: 0px;
-    width: 60%;
-    }
-
-    .socials-icons a {
-        font-size: 15px;
-
-    }
+   
 
 }

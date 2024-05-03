@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: white;
+            color: white;
         }
 
         h1 {
             text-align: center;
             margin-top: 20px;
-            color: #333;
         }
 
         #projects-list {
@@ -46,6 +47,22 @@
         #projects-list li a:hover {
             color: #0056b3;
         }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -53,6 +70,14 @@
     <ul id="projects-list">
         <!-- Aquí se llenarán los proyectos dinámicamente -->
     </ul>
+
+    <footer>
+        <a href="https://www.facebook.com/rnal.rguez/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/thisis_neto" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/RonaldOrtz" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=50376380206" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </footer>
 
     <script>
         // Función para cargar los proyectos desde GitHub

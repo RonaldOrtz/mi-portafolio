@@ -2,7 +2,7 @@
 /****** Estilos generales ******/
 /*******************************/
 body {
-    color: #757575;
+    color: black;
     background: #ffffff;
     font-family: 'open sans', sans-serif;
 }
@@ -13,21 +13,21 @@ h3,
 h4,
 h5, 
 h6 {
-    color: #fbaf32;
+    color: blue;
     font-family: 'Nunito', sans-serif;
 }
 
 a {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
-    color: #fbaf32;
+    color: rebeccapurple;
     transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #719a0a;
+    color: red;
     outline: none;
     text-decoration: none;
 }
@@ -37,15 +37,15 @@ a:focus {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
-    background: #fbaf32;
-    border: 2px solid #fbaf32;
+    color: red;
+    background: white;
+    border: 2px solid white;
     border-radius: 5px;
     transition: .5s;
 }
 
 .btn.custom-btn:hover {
-    color: #fbaf32;
+    color: black;
     background: transparent;
 }
 
@@ -62,12 +62,12 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #fbaf32;
+    background: black;
     width: 44px;
     height: 44px;
     text-align: center;
     line-height: 1;
-    font-size: 22px;
+    font-size: 15px;
     right: 15px;
     bottom: 15px;
     border-radius: 5px;
@@ -81,11 +81,15 @@ a:focus {
 }
 
 .back-to-top:hover {
-    background: #719a0a;
+    background: blue;
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-    font-size: inherit;
+.txtanimado h1 [class^="flaticon-"]:before,
+.txtanimado h1 [class*=" flaticon-"]:before,
+.txtanimado h1 [class^="flaticon-"]:after,
+.txtanimado h1 [class*=" flaticon-"]:after {
+    font-size: 0.8em; /* Cambiar el tamaño de la letra según sea necesario */
     margin-left: 0;
 }
+
+

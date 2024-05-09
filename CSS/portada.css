@@ -4,7 +4,7 @@
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/EumlWEB-lmgur.jpg);
+    url(imagen/Niiz5t-imgur.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -18,7 +18,7 @@
 }
 
 .contenido-banner .contenedor-img {
-    flex: 1;
+    align-items: flex-end;
     text-align: center;
 }
 
@@ -31,18 +31,20 @@
 
 .contenido-banner img {
     margin-top: 40px;
-    border: 10px solid #1CB698;
+    border: #f8f9fa;
     display: block;
     width: 40%;
-    margin-top: 0%;
-    border-radius: 50px;
+    box-sizing: border-box;
+    border-radius: 75%;
+    
+    
 }
 
 
 .txtanimado h1 {
     color: #ffffff; /* White color */
-    font-size: 50px; /* Font size */
-    font-weight: 100; /* Light font weight */
+    font-size: 4px; /* Font size */
+    font-weight: 4px; /* Light font weight */
 }
 
 .txtanimado h1 span {
@@ -50,7 +52,7 @@
 }
 .txtanimado p {
     position: absolute;
-    padding-top: 65px; 
+    padding-top: 4px; 
     color: #f8f9fa;
 }
 
@@ -61,7 +63,7 @@
 
     .txtanimado p {
         position: absolute;
-        padding-top: 100px; 
+        padding-top: 4px; 
         color: #f8f9fa;
     }
 }
@@ -78,7 +80,7 @@
         width: 80%;
     }
     .txtanimado p {
-        padding-top: 110px;      
+        padding-top: 4px;      
     }
 }
 
@@ -100,7 +102,7 @@
     }
     
     .txtanimado h1 {      
-        font-size: 30px;
+        font-size: 15px;
     }
     .txtanimado p {
         font-size: 18px;
